@@ -52,6 +52,44 @@ section {
   display: none;
 }
 
+::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/* Button */
+
+.main-btn {
+  display: inline-block;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 32px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: var(--accent-color);
+  cursor: pointer;
+
+  color: var(--title-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-btn:hover,
+.main-btn:focus {
+  color: var(--accent-color);
+  background-color: var(--title-color);
+}
+
 /* HEADER */
 
 header {
@@ -205,38 +243,6 @@ header {
   color: var(--title-color);
 }
 
-.hero-btn,
-.form-btn {
-  display: inline-block;
-  min-width: 200px;
-  min-height: 50px;
-  padding: 10px 32px;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: var(--accent-color);
-  cursor: pointer;
-
-  color: var(--title-color);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-
-  letter-spacing: 0.06em;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-btn:hover,
-.hero-btn:focus,
-.form-btn:hover,
-.form-btn:focus {
-  color: var(--accent-color);
-  background-color: var(--title-color);
-}
-
 /* MODAL */
 
 .backdrop {
@@ -274,7 +280,7 @@ header {
   z-index: 2;
 }
 
-.close-btn {
+.modal-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -288,14 +294,9 @@ header {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.modal-btn:hover,
+.modal-btn:focus {
   fill: var(--accent-color);
-}
-
-.modal-icon {
-  width: 30px;
-  height: 30px;
 }
 
 .modal-title {
@@ -312,7 +313,7 @@ header {
   margin: 0;
 }
 
-.form-field {
+.form-label {
   position: relative;
   display: flex;
   width: 100%;
@@ -327,9 +328,8 @@ header {
   position: absolute;
   left: 0;
   top: -16px;
-  font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--text-color);
 }
@@ -345,7 +345,7 @@ header {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:focus-within > .form-item {
+.form-label:focus-within > .form-item {
   fill: var(--accent-color);
 }
 
@@ -361,16 +361,9 @@ header {
   border: 1px solid;
   border-color: rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-::placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
 }
 
 textarea {
@@ -381,14 +374,15 @@ textarea {
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:hover .form-input,
-.form-field:hover .form-item,
-textarea:hover,
+.form-label:hover .form-input,
+.form-label:hover .form-item,
 .form-input:focus,
+textarea:hover,
 textarea:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
@@ -398,6 +392,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .checkbox-input {
@@ -426,20 +421,18 @@ textarea:focus {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-agreement {
-  font-weight: 400;
+.checkbox-agreement {
   font-size: 14px;
   line-height: 1.71;
   color: var(--text-color);
 }
 
-.form-link {
+.checkbox-link {
   position: relative;
-  cursor: pointer;
   color: var(--accent-color);
 }
 
-.form-link::after {
+.checkbox-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -448,13 +441,6 @@ textarea:focus {
   width: 100%;
   height: 1px;
   background: var(--accent-color);
-}
-
-.form-btn {
-  display: block;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* SKILLS */
@@ -757,7 +743,7 @@ textarea:focus {
 .subscribe-input {
   width: 358px;
   height: 50px;
-  padding: 15px 16px;
+  padding-left: 16px;
 
   color: var(--title-color);
   background: transparent;
@@ -766,6 +752,13 @@ textarea:focus {
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+
+.subscribe-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .subscribe-btn {
@@ -798,14 +791,10 @@ textarea:focus {
 }
 
 .filter-btn {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0.03em;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-
   padding: 6px 22px;
-
   text-align: center;
   cursor: pointer;
 
@@ -871,7 +860,6 @@ textarea:focus {
   left: 0;
   width: 100%;
 
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   padding: 63px 24px;
