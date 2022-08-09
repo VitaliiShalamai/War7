@@ -590,7 +590,7 @@ textarea:focus {
   color: var(--text-color);
 }
 
-.social-list {
+.social {
   display: flex;
   justify-content: center;
 }
