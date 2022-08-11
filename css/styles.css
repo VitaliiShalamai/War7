@@ -177,16 +177,16 @@ header {
   background: var(--accent-color);
 }
 
-.contacts-list {
+.contacts {
   display: flex;
   margin-left: auto;
 }
 
-.contacts:not(:last-child) {
+.contacts__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts-link {
+.contacts__link {
   display: flex;
   font-weight: 500;
   font-size: 14px;
@@ -200,13 +200,13 @@ header {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-link:hover,
-.contacts-link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.contacts-icon {
+.contacts__icon {
   margin-right: 10px;
 }
 
