@@ -666,36 +666,36 @@ textarea:focus {
   background-color: var(--background-color);
 }
 
-.contact-list {
+.office__list {
   margin-top: 20px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.contact-item:not(:last-child) {
+.office__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.contact-address {
+.office__address {
   color: var(--title-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-address:hover,
-.contact-address:focus {
+.office__address:hover,
+.office__address:focus {
   color: var(--accent-color);
 }
 
-.contact-link {
+.office__link {
   color: rgba(255, 255, 255, 0.6);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-link:hover,
-.contact-link:focus {
+.office__link:hover,
+.office__link:focus {
   color: var(--accent-color);
 }
 
@@ -725,19 +725,19 @@ textarea:focus {
 
 /* SUBSCRIBE */
 
-.subscribe {
+.subscribe-box {
   margin-left: 93px;
 }
 
-.subscribe-form {
+.subscribe {
   display: flex;
 }
 
-.subscribe-field {
+.subscribe__label {
   margin-right: 12px;
 }
 
-.subscribe-input {
+.subscribe__input {
   width: 358px;
   height: 50px;
   padding-left: 16px;
@@ -751,7 +751,7 @@ textarea:focus {
   border-radius: 4px;
 }
 
-.subscribe-input::placeholder {
+.subscribe__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
 
