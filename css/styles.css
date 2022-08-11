@@ -556,11 +556,11 @@ textarea:focus {
   background-color: var(--filter-color);
 }
 
-.team-list {
+.team__list {
   display: flex;
 }
 
-.team-item {
+.team__item {
   padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -568,11 +568,11 @@ textarea:focus {
   background: var(--title-color);
 }
 
-.team-item:not(:last-child) {
+.team__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.team-name {
+.team__name {
   margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
@@ -583,7 +583,7 @@ textarea:focus {
   color: var(--main-color);
 }
 
-.team-position {
+.team__position {
   margin-top: 10px;
   margin-bottom: 16px;
   font-size: 16px;
