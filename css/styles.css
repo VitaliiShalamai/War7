@@ -450,17 +450,17 @@ textarea:focus {
   background: var(--accent-color);
 }
 
-/* SKILLS */
+/* ADVANTAGE */
 
-.skills-list {
+.advantage__list {
   display: flex;
 }
 
-.skills {
+.advantage__item {
   width: calc((100%-90px) / 4);
 }
 
-.skillls-box {
+.skills__box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -470,11 +470,11 @@ textarea:focus {
   background-color: var(--filter-color);
 }
 
-.skills:not(:last-child) {
+.advantage__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.skills-title {
+.skills__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -485,7 +485,7 @@ textarea:focus {
   color: var(--main-color);
 }
 
-.skills-text {
+.skills__text {
   font-size: 14px;
   line-height: 1.71;
 
