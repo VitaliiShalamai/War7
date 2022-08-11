@@ -512,24 +512,24 @@ textarea:focus {
   color: var(--main-color);
 }
 
-.work-list {
+.work__list {
   display: flex;
 }
 
-.work-list img {
+.work__list img {
   display: block;
 }
 
-.work-item {
+.work__item {
   position: relative;
   z-index: 0;
 }
 
-.work-item:not(:last-child) {
+.work__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.work-box {
+.work__box {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -540,7 +540,7 @@ textarea:focus {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.work-text {
+.work__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
