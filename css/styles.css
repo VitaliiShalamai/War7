@@ -43,7 +43,12 @@ p {
   margin-right: auto;
 }
 
-section {
+.hero,
+.skills,
+.work,
+.team,
+.client,
+.portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
 }
